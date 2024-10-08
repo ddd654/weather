@@ -119,6 +119,9 @@ task copyReactBuildFiles(type: Copy) {
 ![image](https://github.com/user-attachments/assets/16ae6b19-649e-43d7-94ee-da1db78c26c7)
 
 
+- 리액트 할때 만든 파일에서 npm start로 작업을 한다. 경로 주의
+
+
 Spring + react 끝
 
 
