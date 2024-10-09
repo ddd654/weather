@@ -68,7 +68,7 @@ export default App;
 localhost:8080 들어가면 나오게 된다
 
 - build.gradle 파일 맨 아래에 추가할 코드
-                                        폴더 이름
+				front 대신 폴더 이름
                                           v
                                           v
                                           v
