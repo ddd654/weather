@@ -119,7 +119,9 @@ task copyReactBuildFiles(type: Copy) {
 ![image](https://github.com/user-attachments/assets/16ae6b19-649e-43d7-94ee-da1db78c26c7)
 
 
-- 리액트 할때 만든 파일에서 npm start로 작업을 한다. 경로 주의
+- 리액트로 프론트 만들때 그 폴더에서에서 npm start로 작업을 한다.
+- 터미널의 경로가 맞아야 3000으로 열린다
+
 
 
 Spring + react 끝
