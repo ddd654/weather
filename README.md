@@ -152,9 +152,12 @@ export default defineConfig({
 })
 
 
-5173으로 프론트를 하고
-8484로 백을 하게된다
+  그러니까 정리하면 
+  프론트를 5173에서 하고
+  백은 8484에서 한다
 
+대략적인 순서
+  백 서버 On > 프론트 npm run dev > 새로고침
 
 Spring + react 끝
 
