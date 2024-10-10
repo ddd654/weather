@@ -6,14 +6,15 @@ https://start.spring.io/
 
 2. 받은 프로젝트 열고 들어가면 자동으로 빌드
 spring Initializer에서 Dependencies에 Spring Web 추가를 해서
+
 = Spring Web에는 내장톰캣이 있다
 = 톰캣을 따로 설치 안 해도 됨
 = 서버를 따로 설치 안 해도 됨
 = 실행만 누르면 localhost:8080에 뜬다는 말
 
-3. 스프링은 메인으로 실행
+4. 스프링은 메인으로 실행
    
-4. 터미널에서 리액트 설치하기
+5. 터미널에서 리액트 설치하기
 
 cd src/main
 npx create-react-app front
@@ -157,7 +158,8 @@ export default defineConfig({
   백은 8484에서 한다
 
 대략적인 순서
-  백 서버 On > 프론트 npm run dev > 새로고침
+
+백 서버 On > 프론트 npm run dev > 새로고침
 
 Spring + react 끝
 
