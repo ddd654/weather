@@ -134,6 +134,7 @@ npm install --save-dev vite @vitejs/plugin-react vite-tsconfig-paths vite-plugin
 마지막으로 하기 proxy 설정 코드를 vite.config.js 에 입력해 준다.
 tomcat 포트가 8080 이기 때문에, proxy 를 설정하여 해당 포트로 이동 시 frontend 에서 렌더링한 View 가 나오게 된다.
 
+
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
@@ -141,10 +142,18 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
-    proxy: 'http://localhost:8080'
-  }
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8484',
+        changeOrigin: true,
+      },
+    },
+  },
 })
 
+
+5173으로 프론트를 하고
+8484로 백을 하게된다
 
 
 Spring + react 끝
