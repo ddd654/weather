@@ -125,6 +125,8 @@ task copyReactBuildFiles(type: Copy) {
 
 
 11. vite 와 함께하려면 비트 터미널로 설치하고
+    
+npm create vite@latest frontend -- --template react
 
 npm install --save-dev vite @vitejs/plugin-react vite-tsconfig-paths vite-plugin-svgr
 
