@@ -10,7 +10,7 @@ public class HelloController {
 
     @GetMapping("/api/hello")
     public String test() {
-        System.out.println("컨12321");
+        System.out.println("컨12312312321");
         return "데이터123";
     }
 }
