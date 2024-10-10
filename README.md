@@ -124,8 +124,11 @@ task copyReactBuildFiles(type: Copy) {
 
 
 
-11. vite 와 함께하려면
-12. 5. vite.config.js 프록시 설정
+11. vite 와 함께하려면 비트 터미널로 설치하고
+
+npm install --save-dev vite @vitejs/plugin-react vite-tsconfig-paths vite-plugin-svgr
+
+13. 5. vite.config.js 프록시 설정
 마지막으로 하기 proxy 설정 코드를 vite.config.js 에 입력해 준다.
 tomcat 포트가 8080 이기 때문에, proxy 를 설정하여 해당 포트로 이동 시 frontend 에서 렌더링한 View 가 나오게 된다.
 
