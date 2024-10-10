@@ -8,17 +8,22 @@ import axios from 'axios';
 function App() {
   const [count, setCount] = useState(0)
 
-  const [hello, setHello] = useState(''); 
-  useEffect(() => { axios.get('/api/hello')
+  const [hello, setHello] = useState('');
+  useEffect(() => {
+    axios.get('/api/hello')
     .then(response => setHello(response.data))
-    .catch(error => console.log(error)) 
+    .catch(error => console.log(error))
   }, []);
+
+  // 그러니까 정리하면 
+  // 프론트를 5173에서 하고
+  // 백은 8484에서 하자
+
+  // 백 서버 On > 프론트 npm run dev > 새로고침
 
   return (
     <>
-      그러니까 정리하면 
-      프론트를 5173에서 하고
-      백은 8484에서 한다?
+
       백 데이터 받기 : {hello}
       <div>
         <a href="https://vitejs.dev" target="_blank">
