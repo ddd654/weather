@@ -10,7 +10,7 @@ function Main() {
 
   useEffect(() => {
     // API 요청
-    axios.get('http://localhost:8484/api/hello')
+    axios.get('/api/hello')
       .then(response => {
         setHello(response.data);
         // setIsLoading(false);
