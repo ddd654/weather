@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+
+.single-day-regular {
+  font-family: "Single Day", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+body {
+  background-color: rgb(255, 254, 249);
+}
+
+header {}
+
+.weatherMenu {
+  border: 1px solid gray;
+}
+
+.weatherMenu ul {
+  display: flex;
+}
+
+.weatherMenu ul li {
+
+}
+
+
