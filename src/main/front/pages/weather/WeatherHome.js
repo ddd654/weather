@@ -13,7 +13,7 @@ function WeatherHome() {
       react-three/fiber는 three.js를 component 기반 방식으로 사용할 수 있게 한다. 
       jsx를 가져와 캔버스 용 three.js 코드로 변환한다.
       react-three/drei는 fiber의 components들을 미리 구현해놔서 
-      우리가 재사용하면 되는 패키지이다. */}
+      우리가 재사용하면 되는 패키지이다. */} 
 
   useEffect(() => {
 
