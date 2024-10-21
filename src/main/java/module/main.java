@@ -2,16 +2,23 @@ package module;
 
 public class main {
     public static void main(String[] args) {
-        Calculator cal = new Calculator();
-        cal.sumAll();
-        System.out.println(cal.sumAll(12, 2, 3, 4, 5, 5));
-
-        cal.sumAll(2, 3);
-
 
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
