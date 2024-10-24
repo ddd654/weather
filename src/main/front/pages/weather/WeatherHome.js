@@ -17,54 +17,76 @@ function WeatherHome() {
       우리가 재사용하면 되는 패키지이다. */}
 
 
-  // useEffect(() => {
-  //   const scene = new THREE.Scene();
-  //   const camera = new THREE.PerspectiveCamera(
-  //     75,
-  //     innerWidth / innerHeight,
-  //     0.1,
-  //     1000
-  //   );
+  useEffect(() => {
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(
+      75,
+      innerWidth / innerHeight,
+      0.1,
+      1000
+    );
 
-  //   const renderer = new THREE.WebGLRenderer();
-  //   renderer.setSize(innerWidth, innerHeight);
-  //   document.body.appendChild(renderer.domElement);
+    const renderer = new THREE.WebGLRenderer(
+      {
+        antialias: true //사각형 없애기 그래픽 향상
+      }
+    );
 
-  //   //구 
-  //   const sphere = new THREE.Mesh(
-  //     new THREE.SphereGeometry(5, 50, 50),
-  //     new THREE.MeshBasicMaterial({
-  //       color: 0x808080
-  //     }));
+    renderer.setSize(innerWidth, innerHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);//디테일하게 된다
 
-  //   function animate() {
-  //     requestAnimationFrame(animate)
-  //     renderer.render(scene, camera)
-  //   }
+    let bgColor = 'yellow';
+    let opacity = 0.2;
+    renderer.setClearColor(bgColor, opacity);
 
-  //   animate();
-  // })
+    document.body.appendChild(renderer.domElement);
 
-  useEffect( () => {
+    //구 
+    const sphere = new THREE.Mesh(
+      new THREE.SphereGeometry(5, 50, 50), //radius, extends, 
+      new THREE.MeshBasicMaterial({
+        color: 'gray',
+        //3. 텍스쳐
+        map: new THREE.TextureLoader().load('../img/earth.jpg') //뭔가 인식이 안되는지 public 폴더 만들어서 넣음
+      })
+    );
 
-    alert( 1+
-      23
-      +4
-    )
+    //확인
+    // console.log(sphere)
+    scene.add(sphere) //카메라 추가도
+    camera.position.z = 20 //z축 시야 길이?
+
+    function animate() {
+      requestAnimationFrame(animate)
+      renderer.render(scene, camera)
+    }
+
+    animate();
+
+    //디자인 저장할때마다 아래로 누적되는거 막기 대괄호 부분까지 
+    return () => {
+      document.body.removeChild(renderer.domElement);
+    }
+  }, []); // 빈 의존성 배열로 컴포넌트가 마운트될 때만 실행)
+
+  useEffect(() => {
+
 
   })
 
+
+  //여기에 구
   return (
 
     <div>
-      <header>List</header>
+      <header>구</header>
       <nav>menu</nav>
       <main>
-        
+
         <section>섹션1</section>
       </main>
     </div>
-    
+
   )
 }
 
