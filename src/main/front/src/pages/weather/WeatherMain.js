@@ -4,6 +4,7 @@ import * as THREE from 'three';
 
 function WeatherMain() {
 
+  //연습용
   useEffect(() => {
     //장면, 랜더링이 필요하다
     let scene = new THREE.Scene();

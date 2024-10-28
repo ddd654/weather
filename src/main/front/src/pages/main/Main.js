@@ -38,7 +38,7 @@ function Main() {
       {/* 어떤 태그를 클릭해서 다른 페이지로 넘어갈 때 함수를 동작시키지 않고 
       그냥 페이지를 보여주면 되는 경우에는 Link 사용하는 게 훨씬 효율적이다. */}
 
-      {/* <Link href="/경로">텍스트</Link> */}
+      {/* <Link href="pages안쪽이 경로가 된다 /경로">텍스트</Link> */}
 
       {/* 페이지 소개, 요약, 제목, 로고 등 */}
       <header className="single-day-regular">
@@ -50,7 +50,7 @@ function Main() {
             <li>메뉴1</li>
             <li>메뉴2</li>
             <li>메뉴3</li>
-            <li><Link href='/page'>테스트~</Link></li>
+            <li><Link href='/po/Po'>po</Link></li>
 
           </ul>
         </nav>

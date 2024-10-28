@@ -2,7 +2,7 @@
 "use client"; // 클라이언트 컴포넌트로 설정
 
 import { useEffect, useState } from "react";
-import Main from "../../pages/main/Main";
+import Main from "../pages/main/Main";
 import "./css/reset.css";
 
 export default function Home() {

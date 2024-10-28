@@ -1,3 +1,4 @@
+//DAY 1
 //[11, 22].forEach(alert);
 
 let message;
@@ -79,7 +80,9 @@ let value = true;
 value =Number(value);
 console.log(value); // 숫자 1이 나온다
 
+///////////////
 
+//DAY 2
 
 
 

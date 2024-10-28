@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import './WeatherHome.css';
 import * as THREE from 'three'
-
+import vertexShader from '../../shaders/vertex.glsl';
 
 function WeatherHome() {
 
@@ -33,7 +33,7 @@ function WeatherHome() {
     );
 
     renderer.setSize(innerWidth, innerHeight);
-    renderer.setPixelRatio(window.devicePixelRatio);//디테일하게 된다
+    renderer.setPixelRatio(window.devicePixelRatio);//디테일하게 된다, 약간 선명해짐
 
     let bgColor = 'yellow';
     let opacity = 0.2;
@@ -44,10 +44,19 @@ function WeatherHome() {
     //구 
     const sphere = new THREE.Mesh(
       new THREE.SphereGeometry(5, 50, 50), //radius, extends, 
+
       new THREE.MeshBasicMaterial({
         color: 'gray',
         //3. 텍스쳐
-        map: new THREE.TextureLoader().load('../img/earth.jpg') //뭔가 인식이 안되는지 public 폴더 만들어서 넣음
+        map: new THREE.TextureLoader().load('../img/earth.jpg')
+        //뭔가 인식이 안되는지 public 폴더 만들어서 넣음
+      }),
+
+      //glsl 넣고
+      new THREE.ShaderMaterial({
+
+        // vertexShader: ,
+        // fragmentShader:
       })
     );
 
