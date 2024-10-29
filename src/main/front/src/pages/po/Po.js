@@ -424,28 +424,90 @@ function Po() {
     // }
 
 
-    function min(a, b){ //변수 2개
-      if( a < b){
-        return a;
-      } else if(a ==b){
-        return a;
-      } else {
-        return b;
-      }
+    // function min(a, b){ //변수 2개
+    //   if( a < b){
+    //     return a;
+    //   } else if(a ==b){
+    //     return a;
+    //   } else {
+    //     return b;
+    //   }
 
-      // return a < b ? a : b;
+    //   // return a < b ? a : b;
 
-    }
+    // }
 
-    function pow(a,b){ //제곱을 해주는 함수 // 4, 4
-      let sum =0;
-      for(let i = 0; i < b; i++){ //b 번 반복
-        sum += a * b;
-      } 
-      return sum;
-    }
+    // function pow(a,b){ //제곱을 해주는 함수 // 4, 4
+    //   let sum =0;
+    //   for(let i = 0; i < b; i++){ //b 번 반복
+    //     sum += a * b;
+    //   } 
+    //   return sum;
+    // }
 
-    console.log(pow(4,4));
+    // console.log(pow(4,4));
+
+
+    // function sayFruit1(){
+    //   alert("apple");
+    // }
+    // let sayFruit2 = function(){
+    //   alert("banana");
+    // }
+    // alert(sayFruit1); //함수 코드가 보인다
+
+
+    // function fruit(){
+    //   alert("apple");
+    // }
+
+    // let func = fruit;
+    // func();
+    // fruit();
+
+
+
+
+    // 콜백 함수
+    // function ask(question, yes, no){
+    //   if(confirm(question)){
+    //     yes();
+    //   } else {
+    //     no();
+    //   }
+    // }
+
+    // function showOK(){
+    //   alert("동의하셨습니다");
+    // }
+
+    // function showNo(){
+    //   alert("취소하셨습니다");
+    // }
+    // ask("동의하십니까?", showOK, showNo);
+
+    // //확인은 바나나, 취소는 사과
+    // function fruit(question, ok, no){
+    //   if(confirm(question)){
+    //     ok();
+    //   } else{
+    //     no();
+    //   }
+    // }
+
+    // function checkOk(){
+    //   alert("확인은 바나나");
+    // }
+    // function checkNo(){
+    //   alert("취소는 사과");
+    // }
+
+    // fruit("질문123", checkOk,checkNo);
+
+
+
+
+
 
 
 
