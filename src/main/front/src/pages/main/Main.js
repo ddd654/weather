@@ -20,7 +20,8 @@ function Main() {
   }, []);
 
 
-  // 처음 페이지
+  // 처음에 실행하면 나오는 페이지
+  // page.js에서 Main으로 라우터 넣어서 그렇다
   return (
 
     <div>

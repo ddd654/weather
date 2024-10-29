@@ -2,6 +2,10 @@ import React, { useEffect, useRef } from 'react';
 import './WeatherHome.css';
 import * as THREE from 'three'
 import vertexShader from '../../shaders/vertex.glsl';
+import fragmentShader from '../../shaders/fragment.glsl';
+
+import atmosphereFragment from '../../shaders/atmosphereFragment.glsl';
+import atmosphereVertex from '../../shaders/atmosphereVertex.glsl';
 
 function WeatherHome() {
 
@@ -16,8 +20,10 @@ function WeatherHome() {
       react-three/drei는 fiber의 components들을 미리 구현해놔서 
       우리가 재사용하면 되는 패키지이다. */}
 
-
   useEffect(() => {
+
+    // console.log(vertexShader);
+
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
       75,
@@ -36,7 +42,7 @@ function WeatherHome() {
     renderer.setPixelRatio(window.devicePixelRatio);//디테일하게 된다, 약간 선명해짐
 
     let bgColor = 'yellow';
-    let opacity = 0.2;
+    let opacity = 0.1;
     renderer.setClearColor(bgColor, opacity);
 
     document.body.appendChild(renderer.domElement);
@@ -45,24 +51,44 @@ function WeatherHome() {
     const sphere = new THREE.Mesh(
       new THREE.SphereGeometry(5, 50, 50), //radius, extends, 
 
-      new THREE.MeshBasicMaterial({
-        color: 'gray',
-        //3. 텍스쳐
-        map: new THREE.TextureLoader().load('../img/earth.jpg')
-        //뭔가 인식이 안되는지 public 폴더 만들어서 넣음
-      }),
+      // new THREE.MeshBasicMaterial({
+      // color: 'gray',
+      //3. 텍스쳐
+      // map: new THREE.TextureLoader().load('../img/earth.jpg')
+      // //뭔가 인식이 안되는지 public 폴더 만들어서 넣음
+      // }),
 
       //glsl 넣고
       new THREE.ShaderMaterial({
-
-        // vertexShader: ,
-        // fragmentShader:
+        vertexShader: vertexShader,
+        fragmentShader: fragmentShader,
+        uniforms: {
+          globeTexture:{
+            value:new THREE.TextureLoader().load('../img/earth.jpg') //텍스쳐
+          }
+        }
       })
     );
 
     //확인
     // console.log(sphere)
-    scene.add(sphere) //카메라 추가도
+    scene.add(sphere); //구 추가
+
+    //atmosphere
+    const atmosphere = new THREE.Mesh(
+      new THREE.SphereGeometry(5, 50, 50), //radius, extends, 
+      new THREE.ShaderMaterial({
+        vertexShader: atmosphereVertex,
+        fragmentShader: atmosphereFragment,
+        blending: THREE.AdditiveBlending,
+        side: THREE.BackSide
+      })
+    );
+    atmosphere.scale.set(1.1, 1.1, 1.1)
+
+    //추가 설정
+    scene.add(atmosphere); /////////////////////////여기부터
+
     camera.position.z = 20 //z축 시야 길이?
 
     function animate() {

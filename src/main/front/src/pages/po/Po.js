@@ -254,20 +254,198 @@ function Po() {
     // }
 
 
-    let browser = "Chrome"; 
-    if (browser == "Edge") {
-      alert("Edge를 사용하고 계시네요");
+    // let browser = "Chrome"; 
+    // if (browser == "Edge") {
+    //   alert("Edge를 사용하고 계시네요");
 
-    } else if (browser == "Chrome"
-      || browser == "FireFox"
-      || browser == "Safari"
-      || browser == "Opera") {
-      alert("저희 서비스가 지원하는 브라우저를 사용하고 계시네요");
-    } else {
-      alert("현재 페이지는 어떨련지요")
+    // } else if (browser == "Chrome"
+    //   || browser == "FireFox"
+    //   || browser == "Safari"
+    //   || browser == "Opera") {
+    //   alert("저희 서비스가 지원하는 브라우저를 사용하고 계시네요");
+    // } else {
+    //   alert("현재 페이지는 어떨련지요")
+    // }
+
+
+
+    // let fruitName1 = "apple"; 
+
+    // function showMessage(){
+    //   let fruitName1 = "banana";
+
+    //   let message = "good, " + fruitName1;
+    //   alert(message); 
+    //   console.log("하나")
+    // } 
+
+    //함수는 내부 변수인 fruitName1만 사용한다
+    // showMessage();
+
+    // alert(fruitName1);
+
+
+    // function showMessage(from, text = "no text given"){
+    //   // from = "☆" + from + "★";
+
+    //   alert(from + ': ' + text);
+    // }
+
+    // let from = "Chris" //안쪽의 일은 안쪽에서만
+    // showMessage(from, "what is today's lunch?");
+    // showMessage("Jhon", "I'm thinking out");
+
+    // showMessage("chris");
+
+    // function showMessage1(text){
+    //   console.log(text); //undefined가 나온다
+
+    //   if(text == undefined){ //매개변수 생략되었다면
+    //     text = "빈 문자열"; //빈 문자열을 넣는다
+    //   }
+    //   console.log(text);
+    //   alert(text); 
+    // }
+
+    // showMessage1();
+
+    // function showMessage2(text){
+    //   text = text || "빈 문자열";
+    //   alert(text);
+    // }
+    // showMessage2(); 
+
+
+    // function showCount(count){
+    //   alert(count ?? "unknown");
+
+    // }
+    // showCount(0);
+    // showCount(null);
+
+    // function sum(a, b) {
+    //   return a + b;
+    // } 
+    // let result = sum(2,4);
+    // alert(result);
+
+    //-------------------------
+    // function checkAge(age){ //18세 넘으면 true 나오는 함수
+    //   if(age > 18){
+    //     return true;
+    //   } else {
+    //     return confirm("보호자의 동의를 받으셨나요?"); //이때 확인이면 true 나오고 취소면, false
+    //   }
+    // }
+    // let age = prompt("나이를 알려주세요", 18);
+    // if(checkAge(age)){ //true 이면
+    //   alert("접속 허용");
+    // } else { //false 이면
+    //   alert("접속 차단");
+    // }
+    // function showMovie(age){
+    //   if(!checkAge(age)){ //false 지 느낌표는
+    //     // alert("시청 불가능");
+    //     return;
+    //   }
+    //   alert("영화 상영");
+    // }
+
+
+    // function doNothing(){
+    //   // return이 없든 있든 undefined를 반환한다
+    // }
+    // alert(doNothing());
+
+
+    // 소수인지 보여주는 함수
+    // function showPrime(n) {
+    //   nextPrime: for (let i = 2; i < n; i++) {
+    //     for (let j = 2; j < i; j++) {
+    //       if (i % j == 0) continue nextPrime;
+    //     }
+    //     alert(i);
+    //     console.log(i);
+    //   }
+    // }
+
+    //   showPrime(5); 
+
+
+    //두번째 소수 판별코드
+    // function showPrime(n){
+    //   for(let i =2; i < n; i++){
+    //     if(!isPrime){
+    //       continue;
+    //     }
+    //     alert(i);
+    //   }
+    // }
+    // function isPrime(n){
+    //   for(let i = 2; i < n; i++){
+    //     if(n% i ==0){
+    //       return false;
+    //     }
+    //     return true;
+    //   }
+
+    // }
+
+    // function checkAge(age){
+    //   if(age > 18){
+    //     return true;
+    //   } else {
+    //     return confirm("보호자의 동의를 받으셨나요?");
+    //   }
+    // }
+
+    // let age = prompt("나이를 적어주세요",'');
+    // checkAge(age);
+
+    // function checkAge(age){
+    //   if(age > 18){
+    //     return true;
+    //   }
+
+    //   return confirm("보호자의 동의를 받으셨나영?");
+    // }
+
+
+    // function checkAge(age){
+    //   if(age > 18){
+    //     return true;
+    //   } else {
+    //     return confirm("보호자의 동의를 받으셨나요?", '');
+    //   }
+    // }
+
+    // function checkAge2(age){
+    //   return age > 18 ? true : confirm("귀찮아", '');
+    // }
+
+
+    function min(a, b){ //변수 2개
+      if( a < b){
+        return a;
+      } else if(a ==b){
+        return a;
+      } else {
+        return b;
+      }
+
+      // return a < b ? a : b;
+
     }
 
-    
+    function pow(a,b){ //제곱을 해주는 함수 // 4, 4
+      let sum =0;
+      for(let i = 0; i < b; i++){ //b 번 반복
+        sum += a * b;
+      } 
+      return sum;
+    }
+
+    console.log(pow(4,4));
 
 
 
@@ -277,7 +455,13 @@ function Po() {
 
 
 
-  })
+
+
+
+
+
+
+  }, []) //대괄호 넣으면 한번만 실행~~~
 
   return (
     <div>Po 페이지</div>

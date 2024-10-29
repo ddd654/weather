@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+
+  // reactStrictMode:false,//엄격모드 비활성화
+
   async rewrites() {
     return [
       {
@@ -8,13 +11,12 @@ const nextConfig = {
       },
     ];
   },
-  webpack(config){
+  webpack(config) {
     config.module.rules.push({
       test: /\.glsl$/,
       use: 'raw-loader',
     });
     return config;
-
   },
 
 
