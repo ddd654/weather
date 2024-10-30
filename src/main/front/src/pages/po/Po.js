@@ -505,12 +505,232 @@ function Po() {
     // fruit("질문123", checkOk,checkNo);
 
 
+    ////////////////DAY 3
+
+    // function sayHi() {
+    //   alert("hi");
+    // }
+
+    // let func = sayHi;
+
+    // func();
+    // sayHi();
 
 
+    // function ask(question, yes, no) {
+    //   if (confirm(question)) {
+    //     yes();
+    //   } else {
+    //     no();
+    //   }
+    // }
+
+    // let agree = function() {alert("동의하셨습니다")}
+
+    // ask("동의하십니까?",
+    //   agree,
+    //   function () { alert("취소하셨습니다")}
+    // );
+
+    // function sum(a, b) {
+    //   return a + b; //a 와 b 를 더하고 뱉는 함수
+    // }
+
+    // let sum1 = function (x, y) {
+    //   return x + y;
+    // }
+
+    // sayHello("Mr"); //함수 선언문은 어디든지 접근가능하다
+    // function sayHello(name){
+    //   alert(`Hello, ${name}`);
+    // }
+
+    // // sayHello1("kim"); //함수표현식은 늦게 만들어진다
+    // let sayHello1 = function (name){
+    //   alert(`Hello, ${name}`);
+    // }
+    // sayHello1("kim");
 
 
+    // let func = (arg1, arg2) => expression;
+    // let func1 = function (arg1, arg2) {
+    //   return expression;
+    // }
+
+    // let sum = function (a, b) {
+    //   return a + b;
+    // }
+    // let sum1 = (a, b) => a + b;
+    // alert(sum1(2, 3));
 
 
+    // let double = n => n * 2;
+    // let double = function (n) { 
+    //   return n * 2;
+    // }
+    // alert(double(23));
+
+
+    // let sayFruit3 = () => alert("사과 바나나1");
+    // sayFruit3();
+
+    // let sayFruit4 = function(){
+    //   return alert("사과 바나나2");
+    // }
+    // sayFruit4();
+
+    // function sayFruit5(){
+    //   return alert("사과 바나나3");
+    // }
+    // sayFruit5();
+
+
+    // let age = prompt("나이를 알려주세요", 18);
+
+    // let welcome = (age < 18) ?
+    //   () => alert("안뇽") :
+    //   () => alert("안녕하세영");
+
+    // welcome();
+
+    // function welcome2() {
+    //   if(age < 18){
+    //     alert("미성년자");
+    //   } else {
+    //     alert("성인");
+    //   }
+    // }
+    // welcome2();
+
+    // function ask(question, yes, no) {
+    //   if (confirm(question)) {
+    //     yes();
+    //   } else {
+    //     no();
+    //   }
+    // }
+
+    // ask("동의하시겠습니까?",
+    //   function () { alert("동의") },
+    //   function () { alert("취소") }
+    // );
+
+
+    // let ask = (question, yes, no) => {
+    //   if(confirm(question)){
+    //     yes();
+    //   } else {
+    //     no();
+    //   }
+    // }
+    // ask("동의하시겠습니까?",
+    //   () => {alert("동의1")},
+    //   () => { alert("취소2") }
+    // );
+
+    //recup
+    //alert("good"); alert("nice");
+
+    // alert("이 메시지 후 에러발생");
+    // [1, 2].forEach(alert);
+
+    // function sum(a, b) {
+    //   let result = a + b;
+    //   return result;
+    // }
+
+    // let sum2 = function (a, b) {
+    //   return a + b;
+    // }
+
+    // let sum3 = (a, b) => a + b;
+    // let sum4 = (a, b) => {
+    //   let total = a + b;
+
+    //   return total;
+    // }
+
+
+    ////////////////////////////////
+
+
+    //객체
+    // let user = new Object(); // 객체 생성자
+    // let user1 = {}; // 객체 리터럴
+
+    // let user = {
+    //   name: "Chris", //이거 한줄이 property
+    //   age: 44, //age 키의 값 = 44
+    // }
+
+    // alert(user.name + user.age);
+
+    // user.isAdmin = true;
+    // alert(user.isAdmin);
+
+    // delete user.age; //age property 삭제
+
+    // let user = {};
+    // user["likes birds"] = true;
+
+    // alert(user["likes birds"]);
+
+    // let key = "likes birds";
+    // user[key] = true;
+
+    // delete user[key];
+
+
+    //객체는 중괄호
+    // let fruit = {
+    //   name: "Chris",
+    //   count: 12
+    // };
+
+    // console.log(fruit.name + " ~ " + fruit.count);
+    
+    // fruit.isSale = true;
+    // console.log(fruit.isSale);
+
+    
+    // let fruit = prompt("어떤 과일을 구매하시겠습니까?", 'apple');
+    // let bag = {};
+    // bag[fruit] = 5;
+
+    // let bag1 = {
+    //   [fruit + "Computer"]: 555
+    // }
+    // console.log(bag1.appleComputer);
+
+    // function makeUser(name, age, count1){
+    //   return{
+    //     name,
+    //     age: age,
+    //     count1
+    //   };
+    // }
+
+    // let user = makeUser("Chris", 44);
+    // console.log(user.name);
+
+
+    // let user = {};
+    // alert(user.noSuchProperty === undefined);
+    // alert("something" in user);
+
+
+    // for( key in object){
+    // }
+
+    let user2 = {
+      name: "Chris",
+      gender: "man",
+      isAlive: true
+    }
+    for( let key in user2){
+      alert(key); //키
+      alert(user2[key]); //키에 맞는값
+    }
 
 
 

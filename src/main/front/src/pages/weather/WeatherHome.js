@@ -1,3 +1,4 @@
+import gsap from 'gsap';
 import React, { useEffect, useRef } from 'react';
 import './WeatherHome.css';
 import * as THREE from 'three'
@@ -23,6 +24,8 @@ function WeatherHome() {
   useEffect(() => {
 
     // console.log(vertexShader);
+    // console.log(atmosphereFragment);
+
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
@@ -34,12 +37,13 @@ function WeatherHome() {
 
     const renderer = new THREE.WebGLRenderer(
       {
-        antialias: true //사각형 없애기 그래픽 향상
+        antialias: true, //사각형 없애기 그래픽 향상
+        canvas: document.querySelector('canvas') //html 붙이기
       }
     );
 
     renderer.setSize(innerWidth, innerHeight);
-    renderer.setPixelRatio(window.devicePixelRatio);//디테일하게 된다, 약간 선명해짐
+    renderer.setPixelRatio(window.devicePixelRatio);//디테일하게, 약간 선명해짐
 
     let bgColor = 'yellow';
     let opacity = 0.1;
@@ -63,8 +67,8 @@ function WeatherHome() {
         vertexShader: vertexShader,
         fragmentShader: fragmentShader,
         uniforms: {
-          globeTexture:{
-            value:new THREE.TextureLoader().load('../img/earth.jpg') //텍스쳐
+          globeTexture: {
+            value: new THREE.TextureLoader().load('../img/earth.jpg') //텍스쳐
           }
         }
       })
@@ -74,7 +78,7 @@ function WeatherHome() {
     // console.log(sphere)
     scene.add(sphere); //구 추가
 
-    //atmosphere
+    //atmosphere 만들기
     const atmosphere = new THREE.Mesh(
       new THREE.SphereGeometry(5, 50, 50), //radius, extends, 
       new THREE.ShaderMaterial({
@@ -84,19 +88,68 @@ function WeatherHome() {
         side: THREE.BackSide
       })
     );
-    atmosphere.scale.set(1.1, 1.1, 1.1)
+    atmosphere.scale.set(1.1, 1.1, 1.1);
 
     //추가 설정
     scene.add(atmosphere); /////////////////////////여기부터
 
-    camera.position.z = 20 //z축 시야 길이?
+    //그룹
+    const group = new THREE.Group()
+    group.add(sphere);
+    scene.add(group);
 
-    function animate() {
-      requestAnimationFrame(animate)
-      renderer.render(scene, camera)
+    //star
+    const starGeometry = new THREE.BufferGeometry()
+    const starMatrial = new THREE.PointsMaterial({
+      color: 'yellow'
+    })
+
+    const starVertices = []
+    for( let i = 0; i < 9999; i++){
+      const x = (Math.random() - 0.5) * 2000;
+      const y = (Math.random() - 0.5) * 2000;
+      const z = -(Math.random()) * 2000;
+      starVertices.push(x,y,z);
     }
 
+    console.log(starVertices);
+    starGeometry.setAttribute(
+      "position", 
+      new THREE.Float32BufferAttribute(
+        starVertices, 3),
+      
+      )
+
+    const stars = new THREE.Points(starGeometry, starMatrial);
+    // console.log(stars);
+    scene.add(stars);
+
+    camera.position.z = 20 //z축 시야 길이?
+
+
+    //마우스 상수값
+    const mouse = {
+      x: undefined,
+      y: undefined
+    }
+
+    //움직이는 기능, 애니메이션
+    function animate() {
+      requestAnimationFrame(animate);
+      renderer.render(scene, camera);
+      sphere.rotation.y += 0.001;
+      gsap.to(group.rotation,{x: -mouse.y *0.5 , y:mouse.x *0.5, duration:2} )
+    };
     animate();
+
+    addEventListener("mousemove", () => {
+      mouse.x = (event.clientX / innerWidth) * 2 - 1;
+      mouse.y = (event.clientY / innerHeight) * 2 + 1;
+      console.log(mouse);
+    })
+
+
+
 
     //디자인 저장할때마다 아래로 누적되는거 막기 대괄호 부분까지 
     return () => {
@@ -110,14 +163,14 @@ function WeatherHome() {
   })
 
 
-  //여기에 구
+  //구
   return (
 
     <div>
       <header>구</header>
       <nav>menu</nav>
       <main>
-
+        <canvas>내 캔버스</canvas>
         <section>섹션1</section>
       </main>
     </div>
