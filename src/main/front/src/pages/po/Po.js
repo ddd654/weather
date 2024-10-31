@@ -1,3 +1,4 @@
+import { list } from "postcss";
 import { useEffect } from "react";
 
 function Po() {
@@ -688,11 +689,11 @@ function Po() {
     // };
 
     // console.log(fruit.name + " ~ " + fruit.count);
-    
+
     // fruit.isSale = true;
     // console.log(fruit.isSale);
 
-    
+
     // let fruit = prompt("어떤 과일을 구매하시겠습니까?", 'apple');
     // let bag = {};
     // bag[fruit] = 5;
@@ -722,31 +723,104 @@ function Po() {
     // for( key in object){
     // }
 
-    let user2 = {
-      name: "Chris",
-      gender: "man",
-      isAlive: true
-    }
-    for( let key in user2){
-      alert(key); //키
-      alert(user2[key]); //키에 맞는값
-    }
+    // let user2 = {
+    //   name: "Chris",
+    //   gender: "man",
+    //   isAlive: true
+    // }
+    // for( let key in user2){
+    //   alert(key); //키
+    //   alert(user2[key]); //키에 맞는값
+    // }
+
+    // let user = new Object(); //객체 생성자
+    // let user1 = {
+    //   name: "Chris",
+    //   age: 44
+    // };
+
+    // console.log("이름은", user1.name);
 
 
+    ///////////////// DAY 4
+
+    // let fruit = new Object();
+
+    // fruit.name = 'apple2';
+
+    // console.log(fruit.name);
+
+    // let user = {};
+
+    // user["문자열로 추가하기"] = "property123";
+    // alert(user["문자열로 추가하기"])
 
 
+    // let fruit123 = new Object();
+    // fruit123 = {
+    //   name: 'banana',
+    //   count: 22,
+    // };
+
+    // //키로 값찾기
+    // let key = prompt("어떤 값을 찾으시나요?", '');
+    // alert(fruit123[key]);
 
 
+    // let dd = Math.round(100 * (Math.random()));
+    // console.log("qwqwd".length);
+
+    // console.log("code".indexOf("d"));
 
 
+    // function get_fruit(){
+    //   return ['apple', 'banana', 'kiwi', "peach"];
+    // }
+
+    // let fruit = get_fruit();
+
+    // for( let i = 0; i < fruit.length; i++){
+    //   document.write(fruit[i].toUpperCase() + "<br/>");
+    // }
+
+    // fruit.push("gold");
+    // console.log(fruit[4]);
 
 
+    // let fruit2 = {
+    //   name: "apple",
+    //   count: 22,
+    //   color: "red",
+    //   "문자열": "nice",
+
+    // }
+
+    // fruit2.where = "경북";
+    // console.log(fruit2.where);
+
+    // for (let key in fruit2) {
+    //   document.write("<li>key: " + key, ", value: " + fruit2[key] + "</li>");
+    // }
+
+    let grades = {
+      "list": { 'egoing': 11, 'coco': 22, 'banana': 33 },
+      'show': function () {
+        alert("nice");
+        alert(this);
+      }
+    } 
+    grades['show']();
 
 
   }, []) //대괄호 넣으면 한번만 실행~~~
 
   return (
-    <div>Po 페이지</div>
+    <div>
+      Po 페이지
+      <ul>
+        <li>12321</li>
+      </ul>
+    </div>
   )
 }
 

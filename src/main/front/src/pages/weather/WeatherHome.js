@@ -38,7 +38,7 @@ function WeatherHome() {
     const renderer = new THREE.WebGLRenderer(
       {
         antialias: true, //사각형 없애기 그래픽 향상
-        canvas: document.querySelector('canvas') //html 붙이기
+        canvas: document.querySelector("canvas") //html 붙이기
       }
     );
 
@@ -90,15 +90,15 @@ function WeatherHome() {
     );
     atmosphere.scale.set(1.1, 1.1, 1.1);
 
-    //추가 설정
-    scene.add(atmosphere); /////////////////////////여기부터
+    //추가하겠다는 설정
+    scene.add(atmosphere); 
 
-    //그룹
+    //그룹화
     const group = new THREE.Group()
     group.add(sphere);
     scene.add(group);
 
-    //star
+    //star 추가하기
     const starGeometry = new THREE.BufferGeometry()
     const starMatrial = new THREE.PointsMaterial({
       color: 'yellow'
@@ -127,7 +127,7 @@ function WeatherHome() {
     camera.position.z = 20 //z축 시야 길이?
 
 
-    //마우스 상수값
+    //마우스 상수값 객체
     const mouse = {
       x: undefined,
       y: undefined
@@ -137,15 +137,17 @@ function WeatherHome() {
     function animate() {
       requestAnimationFrame(animate);
       renderer.render(scene, camera);
-      sphere.rotation.y += 0.001;
-      gsap.to(group.rotation,{x: -mouse.y *0.5 , y:mouse.x *0.5, duration:2} )
+      sphere.rotation.y += 0.0005;
+      group.rotation.y = mouse.x * 0.5; //마우스 반전류 설정
+      group.rotation.x = mouse.y * 0.5;
+      // gsap.to(group.rotation,{x: -mouse.y *0.5 , y:mouse.x *0.5, duration:2} )
     };
     animate();
 
     addEventListener("mousemove", () => {
       mouse.x = (event.clientX / innerWidth) * 2 - 1;
       mouse.y = (event.clientY / innerHeight) * 2 + 1;
-      console.log(mouse);
+      // console.log(mouse);
     })
 
 
@@ -163,14 +165,18 @@ function WeatherHome() {
   })
 
 
-  //구
+  //여기에 만들것
+  //1. UI/UX 디자인 그림
+
+
   return (
 
     <div>
       <header>구</header>
       <nav>menu</nav>
-      <main>
-        <canvas>내 캔버스</canvas>
+      <main className='flex'>
+        <div>apple</div>
+        <canvas>캔버스123</canvas>
         <section>섹션1</section>
       </main>
     </div>
