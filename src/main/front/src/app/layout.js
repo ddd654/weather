@@ -24,6 +24,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        {/* 페이지 컴포가 이부분에서 랜더링된다 */}
       </body>
     </html>
   );

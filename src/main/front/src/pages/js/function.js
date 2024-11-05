@@ -132,7 +132,7 @@ const add2 = (a, b) => a + b;
 // IIFE
 (function hello() {
   console.log('IIFE');
-
+  
 })(); //바로 함수 호출하는법
 
 //calculator

@@ -1,5 +1,7 @@
+import Link from "next/link";
 import { list } from "postcss";
 import { useEffect } from "react";
+// import '../../app/css/reset.css';
 
 function Po() {
 
@@ -13,10 +15,13 @@ function Po() {
 
   return (
     <div>
-      페이지
       <ul>
-        <li>12321</li>
+        <li><Link href='/lotto/Lotto'>Lotto</Link></li>
+        <li><Link href='/po/Po'>po</Link></li>
+
       </ul>
+
+
     </div>
   )
 }

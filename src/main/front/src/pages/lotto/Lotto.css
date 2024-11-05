@@ -1,0 +1,36 @@
+.body {
+  border: 1px solid black;
+  box-sizing: border-box;
+
+  width: 50%;
+  height: 100vh;
+
+  margin: auto;
+
+}
+
+.body main {
+  border: 1px solid black;
+  width: 33%;
+  margin: auto;
+  
+  text-align: center;
+}
+
+section {
+  border: 1px solid black;
+}
+section > article{}
+section > article > ul{
+  display: flex;
+  justify-content: space-around;
+
+}
+section > article > ul > li{
+
+}
+
+aside{
+  border: 1px solid black;
+}
+
