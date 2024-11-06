@@ -10,11 +10,10 @@ function Lotto() {
   function randomNumber() {
     const arr1 =[];
 
-    
-    while( i < 7){ //배열이 다 찰때까지
+    let i = 0;
+    while( arr1.length < 7){ //배열이 다 찰때까지
       arr1[i] = Math.trunc(Math.random() * 45) +1;
-      
-
+         
       i++
     }
     let randomNumber = Math.trunc(Math.random() * 45) + 1; // 0나오는 경우 있어서 +1
