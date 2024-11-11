@@ -26,7 +26,6 @@ function Po() {
 
       {/* 헤더만 뽑아서 include 생각하기 메뉴 디자인은 부분은 비슷하게 가자 */}
       <header>
-        <div>구역1</div>
         <nav>
           <ul>
             {/* #붙여서 영역이동 가능 */}
@@ -37,7 +36,7 @@ function Po() {
             <li><Link href='#experience' className="link">Project</Link></li>
             <li><Link href='#contact' className="link">Contact</Link></li>
 
-
+            
           </ul>
         </nav>
       </header>
@@ -45,18 +44,14 @@ function Po() {
       {/* slide 만들기 */}
       <main className="main">
 
-        <div
-          className="slide"
-          style={{
-            // transform: `translateY( -${currentSlide * 100}vh)`, //
-            // transition: "transform 1s ease-in-out",
-          }}
-        >
+        <div className="slide">
 
           <section id="home">home</section>
           <section id="about">about</section>
           <section id="experience">experience</section>
           <section id="contact">contact</section>
+          <section id="slideFooter">바닥부분2222222</section>
+
         </div>
       </main>
 
