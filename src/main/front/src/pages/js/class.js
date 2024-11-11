@@ -150,29 +150,9 @@ const me = new Person("Mr.Kim", 444, ['달리기', '자전거', '점프'], 'appl
 me.introduce();
 
 
-class User {
-  constructor(firstName, lastName, age){
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.age = age;
-  }
 
-  get age(){
-    return this._age;
-  }
-  set age(value){
-    this._age = value < 0 ? 0 : value;
-  }
 
-  speak(){
 
-  }
-
-  
-}
-
-const user1 = new User('Steve', 'Job', -1);
-console.log(user1.age);
 
 
 
