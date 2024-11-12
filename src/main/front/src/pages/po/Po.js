@@ -13,10 +13,14 @@ function Po() {
   const [currentSlide, setCurrentslide] = useState(0); //현재 슬라이드
 
   //슬라이즈 전환
-  const nextSlide = () => {
-    setCurrentslide((prev) => (prev + 1) % 4); //슬라이드의 수
+  const goToSlide = (index) => {
+    setCurrentslide(index); //클릭한 부분에 맞는 슬라이드 번호
   };
 
+  // 클릭 이벤트 처리 함수
+  function handleLinkClick(index) {
+    goToSlide(index); //해당 슬라이드로 이동한다
+  }
 
   //지금 뭘 해야하지? 화면을 그리고 css로 위치를 잡는다
   //화면을 여기에 만든다
@@ -30,27 +34,27 @@ function Po() {
           <ul>
             {/* #붙여서 영역이동 가능 */}
 
-            <li><Link href='/po/Intro' className="link">Intro</Link></li>
-            <li><Link href='#home' className="link">Home</Link></li>
-            <li><Link href='#about' className="link">About me</Link></li>
-            <li><Link href='#experience' className="link">Project</Link></li>
-            <li><Link href='#contact' className="link">Contact</Link></li>
+            <li><Link href='/po/Intro' className="link" >Intro</Link></li>
+            <li><Link href='#home' className="link" >Home</Link></li>
+            <li><Link href='#about' className="link" >AboutMe</Link></li>
+            <li><Link href='#experience' className="link" >Project</Link></li>
+            <li><Link href='#contact' className="link" >Contact</Link></li>
 
-            
+
           </ul>
         </nav>
       </header>
 
       {/* slide 만들기 */}
       <main className="main">
-
-        <div className="slide">
-
+        <div className="slides"
+        //  style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+        >
           <section id="home">home</section>
           <section id="about">about</section>
           <section id="experience">experience</section>
+          <section id="blackHole">바닥부분2222222</section>
           <section id="contact">contact</section>
-          <section id="slideFooter">바닥부분2222222</section>
 
         </div>
       </main>

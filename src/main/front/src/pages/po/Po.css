@@ -3,10 +3,12 @@
 
   width: 100%;
   height: 100vh;
-  /* overflow: hidden; */
-  /* 화면스크롤 안되게 하는거였다 */
 
-  /* flex-direction: column; */
+  /* overflow: hidden; */
+  /* 화면스크롤 안보이게 */
+
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -22,6 +24,7 @@ header {
 
 header nav ul {
   display: flex;
+
   /* flex-direction: column; 세로정렬*/
 
   /* justify-content: flex-end; */
@@ -30,25 +33,25 @@ header nav ul {
   /* width: 100%; */
 }
 
-header>nav>ul>li {}
+header>nav>ul>li {
+  margin-right: 20px;
+}
 
 header>nav>ul>li>.link {
   border: 1px solid black;
   border-radius: 100%;
   text-align: center;
 
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
+  margin-right: 20px;
+  padding: 10px;
+
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
 
   display: inline-block;
   /* 인라인인데 블록처럼 적용해야 스타일 들어간다*/
 
-  margin-right: 20px;
-}
-
-header>nav>ul>li>.link {
-  
 }
 
 .slide {
@@ -64,7 +67,7 @@ main {
   height: 100%;
 
   display: flex;
-  flex-direction: column;
+
 }
 
 #home {
@@ -90,8 +93,8 @@ main {
   width: 100%;
   height: 100%;
 }
-
-#slideFooter {
+ 
+#blackHole {
   background-color: lightblue;
   width: 100%;
   height: 100%;
@@ -101,5 +104,8 @@ footer {
   background-color: yellowgreen;
 
   position: fixed;
+  bottom: 0;
+  left: 0;
+
   height: 20%;
 }

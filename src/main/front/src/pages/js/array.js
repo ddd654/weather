@@ -1,4 +1,3 @@
-
 'use strict';
 
 //Array
@@ -17,7 +16,7 @@ console.log('마지막', fruits[fruits.length - 1]);
 
 // 3. loop
 
-console.clear();
+// console.clear();
 // for
 for (let i = 0; i < fruits.length; i++) {
   console.log(fruits[i]);
@@ -38,7 +37,7 @@ fruits.forEach(function (fruit, index, array) {
   console.log(fruit, index, array);
 })
 
-console.clear();
+// console.clear();
 // 4. addtion, deletion, copy
 
 fruits.push('strawberry', 'tomato');
@@ -64,6 +63,7 @@ console.log(fruits);
 fruits.splice(1, 1, "추가한거", '추가2');
 console.log(fruits);
 
+console.clear();
 //배열 합치기
 const fruits2 = ['mango', 'orange'];
 const newFruits = fruits.concat(fruits2);
@@ -71,7 +71,7 @@ console.log(newFruits);
 
 
 //
-console.clear();
+// console.clear();
 console.log(fruits);
 console.log(fruits.indexOf('lemon'));
 console.log(fruits.includes('apple')); // true
@@ -82,12 +82,20 @@ console.clear();
 fruits.push('apple');
 console.log(fruits);
 console.log(fruits.lastIndexOf('lemon')); // 없으면 -1 있으면 그 위치
-
+console.log(fruits.indexOf('lemon'));
 //이모지 윈도우 윈 + ;
 
 
+///////////////////////
+console.log('-------------');
 
+//Q1
+{
+  const fruits11 = ['apple', 'banana', 'orange'];
 
+  const result11 = fruits11.join(' , ');
+  console.log(result11);
+}
 
 
 
