@@ -1,111 +1,120 @@
-.container {
-  box-sizing: border-box;
+/* 웹 폰트를 쓰면 렉걸릴 수도 있다 주의 */
+/* 구글 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
 
-  width: 100%;
+.container {
+  font-family: "Poor Story", system-ui;
+  font-weight: 400;
+  font-style: normal;
+
   height: 100vh;
 
-  /* overflow: hidden; */
-  /* 화면스크롤 안보이게 */
-
-  display: flex;
-  flex-direction: column;
 }
 
+.container {}
+
+/* 메뉴 부분 */
 header {
-  background-color: rgb(252, 255, 228);
-
-  width: 80%;
-  height: 20%;
-  position: fixed;
-  right: 0;
-  top: 0;
-
+  /* border: 1px solid red;
+  position: fixed; */
 }
 
-header nav ul {
-  display: flex;
+header nav ul {}
 
-  /* flex-direction: column; 세로정렬*/
+header>nav>ul>li {}
 
-  /* justify-content: flex-end; */
-  /* 오른쪽 붙이기 */
+header>nav>ul>li>.link {}
 
-  /* width: 100%; */
-}
-
-header>nav>ul>li {
-  margin-right: 20px;
-}
-
-header>nav>ul>li>.link {
-  border: 1px solid black;
-  border-radius: 100%;
-  text-align: center;
-
-  margin-right: 20px;
-  padding: 10px;
-
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-
-  display: inline-block;
-  /* 인라인인데 블록처럼 적용해야 스타일 들어간다*/
-
-}
-
-.slide {
-  border: 2px solid blue;
+/* 메인 부분 */
+.main {
+  border: 2px solid red;
+  box-sizing: border-box;
   width: 100%;
-  height: 100%;
+  height: 80%;
+
+  overflow-x: auto;
+  overflow-y: auto;
 }
 
-/* slide 부분 */
-main {
-  background-color: aliceblue;
+.slides {
+  /* background-color: red; */
+
+  display: flex;
   width: 100%;
   height: 100%;
 
-  display: flex;
+}
 
+#home,
+#about,
+#experience,
+#blackHole,
+#contact {
+  border: 1px solid blue;
+  min-width: 100vw;
 }
 
 #home {
-  background-color: lightcoral;
+  background-color: rgb(255, 181, 181);
   width: 100%;
   height: 100%;
 }
 
 #about {
   background-color: lightsalmon;
-  width: 100%;
-  height: 100%;
 }
 
 #experience {
   background-color: lightyellow;
-  width: 100%;
-  height: 100%;
+
 }
 
 #contact {
   background-color: lightgreen;
-  width: 100%;
-  height: 100%;
+
 }
- 
+
 #blackHole {
   background-color: lightblue;
-  width: 100%;
-  height: 100%;
+
 }
 
+/* 푸터 부분 */
 footer {
   background-color: yellowgreen;
-
-  position: fixed;
-  bottom: 0;
-  left: 0;
-
   height: 20%;
 }
+
+/* css */
+.css {
+  border: 4px solid black
+}
+
+.css .life {
+  border: 1px solid red;
+}
+
+.css .px_font {
+  font-size: 16px;
+}
+
+.css .rem_font {
+  font-size: 1rem;
+}
+
+.css h2{
+  font-size: 2rem;
+  color: yellow;
+}
+
+.css p {
+  background-color: aliceblue;
+  font-size: 4rem;
+  font-weight: bold;
+  /* line-height: 4rem; */
+}
+
+
+
+
+
