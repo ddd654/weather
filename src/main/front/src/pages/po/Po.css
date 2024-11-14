@@ -11,29 +11,59 @@
 
 }
 
-.container {}
-
 /* 메뉴 부분 */
 header {
-  /* border: 1px solid red;
-  position: fixed; */
+  border: 2px solid gray;
+
+  position: fixed;
+  right: 20px;
+  top: 20px;
+
+  width: 400px;
+  height: 100px;
 }
 
-header nav ul {}
 
-header>nav>ul>li {}
+header nav ul {
+  /* 가로배치 2 */
+  display: flex;
+  position: absolute;
+  right: 0;
 
-header>nav>ul>li>.link {}
+}
+
+header>nav>ul>li {
+  /* 가로배치 1*/
+  display: flex;
+
+}
+
+header>nav>ul>li>.link {
+  border: 1px solid black;
+  border-radius: 100%;
+
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  /* 글자 중앙 배치 */
+
+  margin-left: 10px;
+}
+
+header>nav>ul>li>.link:hover {
+  background-color: azure;
+}
 
 /* 메인 부분 */
 .main {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   box-sizing: border-box;
   width: 100%;
-  height: 80%;
+  height: 100%;
 
-  overflow-x: auto;
-  overflow-y: auto;
+  /* overflow-x: auto;
+  overflow-y: auto; */
 }
 
 .slides {
@@ -41,7 +71,7 @@ header>nav>ul>li>.link {}
 
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 80%;
 
 }
 
@@ -50,15 +80,50 @@ header>nav>ul>li>.link {}
 #experience,
 #blackHole,
 #contact {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   min-width: 100vw;
+  height: 100%;
 }
 
 #home {
-  background-color: rgb(255, 181, 181);
+  background-color: rgb(255, 251, 201);
   width: 100%;
   height: 100%;
+
+  display: flex;
+  flex-direction: column;
 }
+
+#home .home_header {
+  border-bottom: 1px solid gray;
+  width: 100%;
+  height: 100px;
+}
+
+#home .home_footer {
+  border-top: 1px solid gray;
+
+}
+
+#home section {
+  /* border: 1px solid red; */
+  display: flex;
+}
+
+#home nav {
+  border-right: 1px solid black;
+}
+
+#home aside {
+  border-left: 1px solid black;
+}
+
+#home nav,
+aside {
+  flex-basis: 150px;
+  flex-shrink: 0;
+}
+
 
 #about {
   background-color: lightsalmon;
@@ -79,42 +144,22 @@ header>nav>ul>li>.link {}
 
 }
 
+#floor {
+  background-color: rgb(19, 90, 66);
+
+  box-sizing: border-box;
+  height: 20%;
+
+  color: white;
+}
+
 /* 푸터 부분 */
 footer {
-  background-color: yellowgreen;
-  height: 20%;
+  background-color: rgba(144, 238, 144, 0.212);
 }
 
 /* css */
 .css {
-  border: 4px solid black
+  background-color: rgb(254, 255, 211);
+  height: 80%;
 }
-
-.css .life {
-  border: 1px solid red;
-}
-
-.css .px_font {
-  font-size: 16px;
-}
-
-.css .rem_font {
-  font-size: 1rem;
-}
-
-.css h2{
-  font-size: 2rem;
-  color: yellow;
-}
-
-.css p {
-  background-color: aliceblue;
-  font-size: 4rem;
-  font-weight: bold;
-  /* line-height: 4rem; */
-}
-
-
-
-
-

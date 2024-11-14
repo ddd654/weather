@@ -8,12 +8,12 @@ function Lotto() {
 
   // 1. 버튼을 누르면 랜덤 번호가 나온다
   function randomNumber() {
-    const arr1 =[];
+    const arr1 = [];
 
     let i = 0;
-    while( arr1.length < 7){ //배열이 다 찰때까지
-      arr1[i] = Math.trunc(Math.random() * 45) +1;
-         
+    while (arr1.length < 7) { //배열이 다 찰때까지
+      arr1[i] = Math.trunc(Math.random() * 45) + 1;
+
       i++
     }
     let randomNumber = Math.trunc(Math.random() * 45) + 1; // 0나오는 경우 있어서 +1
@@ -24,8 +24,7 @@ function Lotto() {
     // 숫자를 배열에 넣고, 중복을 확인한다
     // 중복이 없으면 찍기, 있으면 다시 뽑기
 
-
-
+    
   }
 
   // 2. 1 ~ 45 중에서 랜덤으로 7개를 뽑아 표시하기
