@@ -16,7 +16,7 @@ header {
   border: 2px solid gray;
 
   position: fixed;
-  right: 20px;
+  right: -500px;
   top: 20px;
 
   width: 400px;
@@ -29,13 +29,11 @@ header nav ul {
   display: flex;
   position: absolute;
   right: 0;
-
 }
 
 header>nav>ul>li {
   /* 가로배치 1*/
   display: flex;
-
 }
 
 header>nav>ul>li>.link {
@@ -68,7 +66,6 @@ header>nav>ul>li>.link:hover {
 
 .slides {
   /* background-color: red; */
-
   display: flex;
   width: 100%;
   height: 80%;
@@ -86,14 +83,18 @@ header>nav>ul>li>.link:hover {
 }
 
 #home {
-  background-color: rgb(255, 251, 201);
+  background-color: rgb(255, 253, 228);
   width: 100%;
   height: 100%;
 
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-}
 
+  justify-content: center; */
+}
+#home_container{
+  border: 1px solid black;
+}
 #home .home_header {
   border-bottom: 1px solid gray;
   width: 100%;
@@ -102,7 +103,6 @@ header>nav>ul>li>.link:hover {
 
 #home .home_footer {
   border-top: 1px solid gray;
-
 }
 
 #home section {
@@ -131,23 +131,21 @@ aside {
 
 #experience {
   background-color: lightyellow;
-
 }
 
 #contact {
   background-color: lightgreen;
-
 }
 
 #blackHole {
   background-color: lightblue;
-
 }
 
 #floor {
-  background-color: rgb(19, 90, 66);
+  background-color: rgb(222, 255, 244);
 
   box-sizing: border-box;
+  width: 100%;
   height: 20%;
 
   color: white;

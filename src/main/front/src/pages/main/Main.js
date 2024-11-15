@@ -3,7 +3,6 @@ import "./Main.css";
 import Link from "next/link"; //next.js의 Link compo
 import { useEffect, useState } from "react";
 import axios from "axios";
-import '../../app/css/reset.css';
 
 
 function Main() {
@@ -52,7 +51,7 @@ function Main() {
             <li>메뉴1</li>
             <li>메뉴2</li>
             <li>메뉴3</li>
-            <li><Link href='/po/Po'>portfolio</Link></li>
+            <li><Link href="/html/Po.html">portfolio</Link></li>
 
           </ul>
         </nav>

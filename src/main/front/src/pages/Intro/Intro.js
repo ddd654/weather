@@ -1,3 +1,6 @@
+import "./Intro.css";
+
+
 function Intro() {
   return (
     <div>

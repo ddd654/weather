@@ -3,7 +3,6 @@
 
 import {  useState } from "react";
 import Main from "../pages/main/Main";
-import "./css/reset.css";
 
 export default function Home() {
 
