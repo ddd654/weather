@@ -6,9 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <!-- reset.css 전역 적용 뭔가 안되서 그냥 여기꺼 씀 -->
-  <link rel="stylesheet" href="../css/reset.css"> 
+  <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/Po.css">
 </head>
+
+<script src="../js/Po.js"></script>
 
 <body>
   <div class="container">
@@ -31,6 +33,7 @@
           <li>
             <Link href="#" class="link">Home</Link>
           </li>
+
           <li>
             <Link href="#about" class="link">AboutMe</Link>
           </li>
@@ -50,27 +53,14 @@
     <!-- slide 만들기  -->
     <main class="main">
       <div class="slides">
+
+        <!-- 캐릭터 만들어서 일정 x좌표 이동마다 슬라이드 -->
+        
         <section id="home">
-
-          <!-- <div id="home_container">
-            <div class="home_header">천장</div>
-            <section>
-              <nav>
-                <ul>
-                  <li>사과</li>
-                  <li>바나나</li>
-                  <li>복숭아</li>
-                </ul>
-              </nav>
-              <main>중앙부@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</main>
-              <aside>ad</aside>
-            </section>
-            <div class="home_footer">home바닥</div>
-          </div> -->
-
-          <!-- js -->
+        
           <input type="button" value="dd" onClick="alert('nice')" />
-          <input type="text" onChange="alert('changed')">
+          <input class="myInput" type="text" value="" onChange="alert('changed')">
+          <textarea value="123"></textarea>
 
         </section>
 
@@ -87,7 +77,6 @@
     <!-- <footer>footer부분</footer>  -->
   </div>
 
-  <script src="../js/Po.js"></script>
 </body>
 
 </html>
